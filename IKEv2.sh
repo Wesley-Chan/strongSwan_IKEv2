@@ -121,9 +121,9 @@ then
     cp caCert.pem /usr/local/etc/ipsec.d/cacerts/
 elif [ "$CERT" = "letsencrypt" ]
 then
-    cp $CERT_LE_DIR/privkey.pem /usr/local/etc/ipsec.d/private/hostKey.pem
-    cp $CERT_LE_DIR/cert.pem /usr/local/etc/ipsec.d/certs/hostCert.pem
-    cp $CERT_LE_DIR/chain.pem /usr/local/etc/ipsec.d/cacerts/caCert.pem
+    ln -s $CERT_LE_DIR/privkey.pem /usr/local/etc/ipsec.d/private/hostKey.pem
+    ln -s $CERT_LE_DIR/cert.pem /usr/local/etc/ipsec.d/certs/hostCert.pem
+    ln -s $CERT_LE_DIR/chain.pem /usr/local/etc/ipsec.d/cacerts/caCert.pem
 else
     echo "Error: $CERT is not supported."
     exit 1
