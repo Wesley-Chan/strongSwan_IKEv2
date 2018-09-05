@@ -2,7 +2,7 @@
 
 #******************************************************************************
 # Modify these variables according to your setup.
-STRONGSWAN_VER=5.5.1
+STRONGSWAN_VER=5.6.3
 
 # Choose your distro.
 #=============================
